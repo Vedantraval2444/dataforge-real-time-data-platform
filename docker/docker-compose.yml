@@ -66,12 +66,11 @@ services:
       - dataforge-network
 
   spark:
-    image: docker-spark:latest
+    image: apache/spark:3.5.0
     container_name: dataforge-spark
-    depends_on:
-      - kafka
-    networks:
-      - dataforge-network
+    volumes:
+      - ../spark-apps:/opt/spark-apps
+      - ../jars:/opt/spark-jars
     command: tail -f /dev/null
 
 
