@@ -1,0 +1,7 @@
+project:
+  name: dataforge
+  environment: local
+
+paths:
+  data_lake: /data/lake
+  warehouse: /data/warehouse
